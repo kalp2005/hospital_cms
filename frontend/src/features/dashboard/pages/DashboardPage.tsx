@@ -1,19 +1,11 @@
-import { AppHeader } from "@/components/layout/AppHeader";
-
 export default function DashboardPage() {
   return (
-    <>
-      <AppHeader />
+    <div>
+      <h2 className="text-xl font-semibold">Dashboard Overview</h2>
 
-      <div className="p-6">
-        <h1 className="text-3xl font-bold">
-          Welcome 👋
-        </h1>
-
-        <p className="mt-2 text-slate-500">
-          Hospital Management Dashboard
-        </p>
-      </div>
-    </>
+      <p className="mt-2 text-muted-foreground">
+        Hospital management dashboard will appear here.
+      </p>
+    </div>
   );
 }
