@@ -1,3 +1,4 @@
+import { Logo } from "../common/Logo";
 import { NavMain } from "./NavMain";
 
 import {
@@ -11,8 +12,8 @@ import {
 export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader className="h-14 justify-center px-4">
-        <h2 className="text-lg font-bold">Hospital CMS</h2>
+      <SidebarHeader className="h-14 px-4">
+        <Logo/>
       </SidebarHeader>
 
       <SidebarContent>
