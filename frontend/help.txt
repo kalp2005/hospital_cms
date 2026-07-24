@@ -21,12 +21,6 @@
                 ├── Loading.tsx
                 ├── Logo.tsx
                 ├── PageTitle.tsx
-            └── 📁dashboard
-                ├── DashboardCards.tsx
-                ├── QuickActions.tsx
-                ├── RecentActivity.tsx
-                ├── Statistics.tsx
-                ├── WelcomeBanner.tsx
             └── 📁editor
                 ├── ImageUploader.tsx
                 ├── PageBuilder.tsx
@@ -39,14 +33,11 @@
             └── 📁layout
                 ├── AppHeader.tsx
                 ├── AppSidebar.tsx
+                ├── DashboardLayout.tsx
                 ├── index.ts
                 ├── NavMain.tsx
                 ├── NavUser.tsx
-                ├── Notifications.tsx
                 ├── PageContainer.tsx
-                ├── SearchBar.tsx
-                ├── TeamSwitcher.tsx
-                ├── UserMenu.tsx
             └── 📁tables
                 ├── DataTable.tsx
                 ├── Pagination.tsx
@@ -104,7 +95,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── BlogsPage.tsx
                 └── 📁schemas
                     ├── blog.schema.ts
                 ├── .gitkeep
@@ -118,7 +109,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── CareersPage.tsx
                 └── 📁schemas
                     ├── career.schema.ts
                 ├── index.ts
@@ -127,7 +118,11 @@
                 └── 📁api
                     ├── .gitkeep
                 └── 📁components
-                    ├── .gitkeep
+                    ├── DashboardCards.tsx
+                    ├── QuickActions.tsx
+                    ├── RecentActivity.tsx
+                    ├── Statistics.tsx
+                    ├── WelcomeBanner.tsx
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
@@ -142,7 +137,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── FormSubmissionsPage.tsx
                 ├── index.ts
                 ├── types.ts
             └── 📁gallery
@@ -153,7 +148,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── GalleryPage.tsx
                 ├── index.ts
                 ├── types.ts
             └── 📁media
@@ -163,7 +158,7 @@
                     ├── .gitkeep
                 └── 📁hooks
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── MediaPage.tsx
                 └── 📁schemas
                     ├── media.schema.ts
                 ├── index.ts
@@ -175,9 +170,9 @@
                     ├── .gitkeep
                 └── 📁hooks
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── MenusPage.tsx
                 └── 📁schemas
-                    ├── doctor.schema.ts
+                    ├── menu.schema.ts
                 ├── index.ts
                 ├── types.ts
             └── 📁pages
@@ -188,8 +183,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
-                ├── .gitkeep
+                    ├── PagesPage.tsx
                 ├── index.ts
                 ├── types.ts
             └── 📁roles
@@ -214,7 +208,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── SeoPage.tsx
                 ├── index.ts
                 ├── types.ts
             └── 📁settings
@@ -225,7 +219,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── SettingsPage.tsx
                 ├── index.ts
                 ├── types.ts
             └── 📁users
@@ -236,7 +230,7 @@
                 └── 📁hooks
                     ├── .gitkeep
                 └── 📁pages
-                    ├── .gitkeep
+                    ├── UsersPage.tsx
                 └── 📁schemas
                     ├── user.schema.ts
                 ├── .gitkeep
