@@ -1,76 +1,58 @@
-import { NavLink } from "react-router-dom";
-
 import { navigation } from "@/constants/navigation";
+
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
 } from "@/components/ui/sidebar";
+
+import { NavItem } from "./NavItem";
 
 export function NavMain() {
   return (
     <>
       {navigation.map((section) => {
-        // Dashboard (single link)
+        // Single item (Dashboard)
         if ("url" in section) {
-          const Icon = section.icon;
-
           return (
-            <SidebarGroup key={section.title}>
+            <SidebarGroup
+              key={section.title}
+              className="py-1"
+            >
               <SidebarGroupContent>
                 <SidebarMenu>
-                  <SidebarMenuItem>
-                    <SidebarMenuButton
-                      render={
-                        <NavLink
-                          to={section.url}
-                          className={({ isActive }) =>
-                            isActive ? "data-[active=true]" : ""
-                          }
-                        />
-                      }
-                    >
-                      <Icon />
-                      <span>{section.title}</span>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
+                  <NavItem
+                    title={section.title}
+                    url={section.url}
+                    icon={section.icon}
+                  />
                 </SidebarMenu>
               </SidebarGroupContent>
             </SidebarGroup>
           );
         }
 
-        // Grouped items
+        // Grouped navigation
         return (
-          <SidebarGroup key={section.title}>
-            <SidebarGroupLabel>{section.title}</SidebarGroupLabel>
+          <SidebarGroup
+            key={section.title}
+            className="py-1"
+          >
+            <SidebarGroupLabel className="px-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              {section.title}
+            </SidebarGroupLabel>
 
             <SidebarGroupContent>
               <SidebarMenu>
-                {section.items.map((item) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton
-                        render={
-                          <NavLink
-                            to={item.url}
-                            className={({ isActive }) =>
-                              isActive ? "data-[active=true]" : ""
-                            }
-                          />
-                        }
-                      >
-                        <Icon />
-                        <span>{item.title}</span>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  );
-                })}
+                {section.items.map((item) => (
+                  <NavItem
+                    key={item.title}
+                    title={item.title}
+                    url={item.url}
+                    icon={item.icon}
+                  />
+                ))}
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>

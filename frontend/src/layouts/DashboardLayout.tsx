@@ -14,8 +14,10 @@ export default function DashboardLayout() {
       <SidebarInset>
         <AppHeader />
 
-        <main className="flex flex-1 flex-col p-6">
-          <Outlet />
+        <main className="flex flex-1">
+          <div className="mx-auto w-full max-w-7xl p-6 lg:p-8">
+            <Outlet />
+          </div>
         </main>
       </SidebarInset>
     </SidebarProvider>

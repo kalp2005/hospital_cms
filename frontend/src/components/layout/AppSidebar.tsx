@@ -12,16 +12,16 @@ import {
 export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader className="h-14 px-4">
-        <Logo/>
+      <SidebarHeader className="border-b px-4 py-3">
+        <Logo />
       </SidebarHeader>
 
-      <SidebarContent>
+      <SidebarContent className="px-2 py-3">
         <NavMain />
       </SidebarContent>
 
-      <SidebarFooter>
-        {/* User profile will go here */}
+      <SidebarFooter className="border-t p-2">
+        {/* User profile */}
       </SidebarFooter>
 
       <SidebarRail />
