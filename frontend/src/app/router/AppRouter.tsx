@@ -3,8 +3,8 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AuthLayout from "@/layouts/AuthLayout";
 import DashboardLayout from "@/layouts/DashboardLayout";
 
-import LoginPage from "@/features/auth/pages/LoginPage";
-import DashboardPage from "@/features/dashboard/pages/DashboardPage";
+import LoginPage from "@/features/auth/pages/AuthPage";
+import DashboardPage from "@/features/form-submissions/api/dashboard/pages/DashboardPage";
 
 import { ROUTES } from "./routes";
 
