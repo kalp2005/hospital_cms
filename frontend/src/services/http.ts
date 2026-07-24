@@ -1,0 +1,1 @@
+export { axiosInstance as http } from "@/config/axios";
