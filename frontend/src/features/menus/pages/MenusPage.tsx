@@ -1,4 +1,4 @@
-export default function MenuPage() {
+export default function MenusPage() {
   return (
     <div>
       <h1 className="text-3xl font-bold">Menus</h1>
