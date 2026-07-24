@@ -1,23 +1,43 @@
+import type { LucideIcon } from "lucide-react";
 import {
-  LayoutDashboard,
-  FileText,
-  Newspaper,
-  Image,
   Briefcase,
-  Menu,
-  FolderOpen,
-  Search,
   FileSpreadsheet,
-  Users,
-  Shield,
+  FileText,
+  FolderOpen,
+  Image,
+  LayoutDashboard,
+  Menu,
+  Newspaper,
+  Search,
   Settings,
+  Shield,
+  Users,
 } from "lucide-react";
 
-export const navigation = [
+import { ROUTES } from "./routes";
+
+export interface NavigationItem {
+  title: string;
+  url: string;
+  icon: LucideIcon;
+}
+
+export interface NavigationGroup {
+  title: string;
+  items: NavigationItem[];
+}
+
+export interface NavigationLink extends NavigationItem {
+  items?: never;
+}
+
+export type Navigation = NavigationLink | NavigationGroup;
+
+export const navigation: Navigation[] = [
   {
     title: "Dashboard",
     icon: LayoutDashboard,
-    url: "/dashboard",
+    url: ROUTES.DASHBOARD,
   },
 
   {
@@ -26,22 +46,22 @@ export const navigation = [
       {
         title: "Pages",
         icon: FileText,
-        url: "/content/pages",
+        url: ROUTES.PAGES,
       },
       {
         title: "Blogs",
         icon: Newspaper,
-        url: "/content/blogs",
+        url: ROUTES.BLOGS,
       },
       {
         title: "Gallery",
         icon: Image,
-        url: "/content/gallery",
+        url: ROUTES.GALLERY,
       },
       {
         title: "Careers",
         icon: Briefcase,
-        url: "/content/careers",
+        url: ROUTES.CAREERS,
       },
     ],
   },
@@ -52,17 +72,17 @@ export const navigation = [
       {
         title: "Menus",
         icon: Menu,
-        url: "/website/menus",
+        url: ROUTES.MENUS,
       },
       {
         title: "Media Library",
         icon: FolderOpen,
-        url: "/website/media",
+        url: ROUTES.MEDIA,
       },
       {
         title: "SEO",
         icon: Search,
-        url: "/website/seo",
+        url: ROUTES.SEO,
       },
     ],
   },
@@ -73,22 +93,22 @@ export const navigation = [
       {
         title: "Form Submissions",
         icon: FileSpreadsheet,
-        url: "/system/forms",
+        url: ROUTES.FORM_SUBMISSIONS,
       },
       {
         title: "Users",
         icon: Users,
-        url: "/system/users",
+        url: ROUTES.USERS,
       },
       {
         title: "Roles",
         icon: Shield,
-        url: "/system/roles",
+        url: ROUTES.ROLES,
       },
       {
         title: "Settings",
         icon: Settings,
-        url: "/system/settings",
+        url: ROUTES.SETTINGS,
       },
     ],
   },

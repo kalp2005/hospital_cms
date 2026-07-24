@@ -1,29 +1,81 @@
 import { NavLink } from "react-router-dom";
+
 import { navigation } from "@/constants/navigation";
+import {
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@/components/ui/sidebar";
 
 export function NavMain() {
   return (
-    <nav className="flex flex-col gap-1">
-      {navigation.map((item) => {
-        const Icon = item.icon;
+    <>
+      {navigation.map((section) => {
+        // Dashboard (single link)
+        if ("url" in section) {
+          const Icon = section.icon;
 
+          return (
+            <SidebarGroup key={section.title}>
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  <SidebarMenuItem>
+                    <SidebarMenuButton
+                      render={
+                        <NavLink
+                          to={section.url}
+                          className={({ isActive }) =>
+                            isActive ? "data-[active=true]" : ""
+                          }
+                        />
+                      }
+                    >
+                      <Icon />
+                      <span>{section.title}</span>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </SidebarGroup>
+          );
+        }
+
+        // Grouped items
         return (
-          <NavLink
-            key={item.title}
-            to={item.url}
-            className={({ isActive }) =>
-              `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                isActive
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
-              }`
-            }
-          >
-            <Icon className="h-4 w-4" />
-            <span>{item.title}</span>
-          </NavLink>
+          <SidebarGroup key={section.title}>
+            <SidebarGroupLabel>{section.title}</SidebarGroupLabel>
+
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {section.items.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <SidebarMenuItem key={item.title}>
+                      <SidebarMenuButton
+                        render={
+                          <NavLink
+                            to={item.url}
+                            className={({ isActive }) =>
+                              isActive ? "data-[active=true]" : ""
+                            }
+                          />
+                        }
+                      >
+                        <Icon />
+                        <span>{item.title}</span>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  );
+                })}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
         );
       })}
-    </nav>
+    </>
   );
 }
