@@ -1,32 +1,278 @@
-src/
-│
-├── app/
-│
-├── components/
-│   ├── dashboard/
-│   │   ├── DashboardStats.tsx
-│   │   ├── StatCard.tsx
-│   │   ├── RevenueChart.tsx
-│   │   ├── AppointmentTable.tsx
-│   │   ├── DoctorList.tsx
-│   │   ├── PatientList.tsx
-│   │   ├── CalendarWidget.tsx
-│   │   └── QuickActions.tsx
-│   │
-│   ├── layout/
-│   │   ├── AppSidebar.tsx
-│   │   ├── AppHeader.tsx
-│   │   ├── UserMenu.tsx
-│   │   ├── SearchBar.tsx
-│   │   └── Notifications.tsx
-│   │
-│   ├── common/
-│   └── ui/
-│
-├── features/
-│
-├── constants/
-│
-├── layouts/
-│
-└── services/
+```
+└── 📁frontend
+    └── 📁public
+        ├── favicon.svg
+        ├── icons.svg
+    └── 📁src
+        └── 📁app
+            └── 📁providers
+                ├── AppProvider.tsx
+                ├── QueryProvider.tsx
+            └── 📁router
+                ├── AppRouter.tsx
+                ├── ProtectedRoute.tsx
+                ├── PublicRoute.tsx
+                ├── routes.ts
+        └── 📁assets
+            ├── hero.png
+        └── 📁components
+            └── 📁common
+                ├── index.ts
+                ├── Loading.tsx
+                ├── Logo.tsx
+                ├── PageTitle.tsx
+            └── 📁dashboard
+                ├── DashboardCards.tsx
+                ├── QuickActions.tsx
+                ├── RecentActivity.tsx
+                ├── Statistics.tsx
+                ├── WelcomeBanner.tsx
+            └── 📁editor
+                ├── ImageUploader.tsx
+                ├── PageBuilder.tsx
+                ├── RichTextEditor.tsx
+                ├── SectionEditor.tsx
+                ├── SeoForm.tsx
+            └── 📁forms
+                ├── FormActions.tsx
+                ├── FormField.tsx
+            └── 📁layout
+                ├── AppHeader.tsx
+                ├── AppSidebar.tsx
+                ├── index.ts
+                ├── NavMain.tsx
+                ├── NavUser.tsx
+                ├── Notifications.tsx
+                ├── PageContainer.tsx
+                ├── SearchBar.tsx
+                ├── TeamSwitcher.tsx
+                ├── UserMenu.tsx
+            └── 📁tables
+                ├── DataTable.tsx
+                ├── Pagination.tsx
+                ├── TableToolbar.tsx
+            └── 📁ui
+                ├── avatar.tsx
+                ├── badge.tsx
+                ├── breadcrumb.tsx
+                ├── button.tsx
+                ├── card.tsx
+                ├── dialog.tsx
+                ├── dropdown-menu.tsx
+                ├── index.ts
+                ├── input.tsx
+                ├── label.tsx
+                ├── navigation-menu.tsx
+                ├── separator.tsx
+                ├── sheet.tsx
+                ├── sidebar.tsx
+                ├── skeleton.tsx
+                ├── sonner.tsx
+                ├── table.tsx
+                ├── tooltip.tsx
+        └── 📁config
+            ├── axios.ts
+            ├── env.ts
+            ├── queryClient.ts
+        └── 📁constants
+            ├── api.ts
+            ├── index.ts
+            ├── navigation.ts
+            ├── roles.ts
+            ├── routes.ts
+            ├── sidebar.ts
+        └── 📁features
+            └── 📁auth
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── LoginPage.tsx
+                └── 📁schemas
+                    ├── auth.schema.ts
+                ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁blogs
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                └── 📁schemas
+                    ├── blog.schema.ts
+                ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁careers
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                └── 📁schemas
+                    ├── career.schema.ts
+                ├── index.ts
+                ├── types.ts
+            └── 📁dashboard
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── DashboardPage.tsx
+                ├── index.ts
+                ├── types.ts
+            └── 📁form-submissions
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁gallery
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁media
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                └── 📁pages
+                    ├── .gitkeep
+                └── 📁schemas
+                    ├── media.schema.ts
+                ├── index.ts
+                ├── types.ts
+            └── 📁menus
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                └── 📁pages
+                    ├── .gitkeep
+                └── 📁schemas
+                    ├── doctor.schema.ts
+                ├── index.ts
+                ├── types.ts
+            └── 📁pages
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁roles
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── RolesPage.tsx
+                └── 📁schemas
+                    ├── role.schema.ts
+                ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁seo
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁settings
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+            └── 📁users
+                └── 📁api
+                    ├── .gitkeep
+                └── 📁components
+                    ├── .gitkeep
+                └── 📁hooks
+                    ├── .gitkeep
+                └── 📁pages
+                    ├── .gitkeep
+                └── 📁schemas
+                    ├── user.schema.ts
+                ├── .gitkeep
+                ├── index.ts
+                ├── types.ts
+        └── 📁hooks
+            ├── .gitkeep
+            ├── use-mobile.ts
+        └── 📁layouts
+            ├── AuthLayout.tsx
+            ├── DashboardLayout.tsx
+        └── 📁lib
+            ├── cn.ts
+            ├── utils.ts
+        └── 📁services
+            ├── http.ts
+            ├── storage.ts
+        └── 📁types
+            ├── api.ts
+            ├── auth.ts
+            ├── common.ts
+        └── 📁utils
+            ├── .gitkeep
+        ├── App.tsx
+        ├── index.css
+        ├── main.tsx
+    ├── .gitignore
+    ├── components.json
+    ├── eslint.config.js
+    ├── help.txt
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    ├── README.md
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
+```
